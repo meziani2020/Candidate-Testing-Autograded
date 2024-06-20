@@ -59,7 +59,7 @@ function gradeQuiz(candidateAnswers) {
   */
   
   let  textTemplat="";
-  let goonIn=0;
+  let goodIn=0; // numner of good inswers
   let percentage=0;
 
   for(let i=0; i<questions.length; i++){
@@ -67,16 +67,19 @@ function gradeQuiz(candidateAnswers) {
 
     //chek the answer
 
-    //if goog answer goonIn++
-    if(candidateAnswers[i]==correctAnswers[i]){
-      goonIn++;
+    //if good is answer goodIn increments
+    // to make it case insensitive we compare the UpperCase forme of the answer and the unswer using convertionmethod toUpperCase()   
+    if(candidateAnswers[i].toUpperCase()==correctAnswers[i].toUpperCase()){
+      goodIn++;
     }
 
     }
+    // calculate the percentage good unswers  based on total nbre of questions and nember of good inswers
+    percentage=(goodIn/questions.length)*100;
+    console.log(textTemplat);
+    console.log("you got:" + percentage +"% " );
 
-    percentage=(goonIn/questions.length)*100;
-  console.log(textTemplat);
-  console.log("you get:" + percentage +"%" );
+  //decide pass or note
   if(percentage < 80 ){
     console.log("you failed it" );
   }else{
@@ -84,11 +87,10 @@ function gradeQuiz(candidateAnswers) {
   }
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
-
+  grade=percentage;
 
   return grade;
 }
-
 
 function runProgram() {
   askForName();
