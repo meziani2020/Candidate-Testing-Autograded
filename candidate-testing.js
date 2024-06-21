@@ -34,7 +34,7 @@ correctAnswers[4]="3";
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-  candidateName=input.question("Candidate's Name?");
+  candidateName=input.question("Candidate's Name? ");
 }
 
 function askQuestion() {
