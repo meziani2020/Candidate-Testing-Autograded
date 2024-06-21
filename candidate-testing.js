@@ -66,7 +66,6 @@ function gradeQuiz(candidateAnswers) {
     textTemplat += `Your answer: ${candidateAnswers[i]}, Correct answer: ${correctAnswers[i]}.  \n`;
 
     //chek the answer
-
     //if good is answer goodIn increments
     // to make it case insensitive we compare the UpperCase forme of the answer and the unswer using convertionmethod toUpperCase()   
     if(candidateAnswers[i].toUpperCase()==correctAnswers[i].toUpperCase()){
@@ -101,7 +100,7 @@ function runProgram() {
   gradeQuiz(candidateAnswers);
 }
 
-runProgram();
+//runProgram();
 
 
 
